@@ -1,0 +1,172 @@
+th.customHeader {
+  background-image: url("chrome-extension://__MSG_@@extension_id__/img/bg.gif");
+  cursor: pointer; 
+  font-weight: bold; 
+  background-repeat: no-repeat; 
+  background-position: center left; 
+  padding-left: 15px; 
+  border-right: 1px solid #dad9c7; 
+  margin-left: -1px;
+  background-color: #99CCFF;
+}
+th.customHeaderSortUp { 
+    background-image: url("chrome-extension://__MSG_@@extension_id__/img/asc.gif");
+    background-color: #3399FF;
+}
+th.customHeaderSortDown { 
+    background-image: url("chrome-extension://__MSG_@@extension_id__/img/desc.gif");
+    background-color: #3399FF;
+}
+table.jafData {
+  border-collapse: collapse;
+  border: 1px solid #999;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+table.jafData tr {
+  border: 1px solid #999;
+}
+table.jafData tr td {
+  font-size: small;
+}
+table.jafData tr:nth-child(even) {
+  background: #EEFFFF;
+}
+table.jafData tr:nth-child(odd) {
+  background: #DDEEFF;
+}
+table.jafData tr.signedAlready {
+  background: #AAFFCC;
+}
+table.jafData tr:hover {
+  background: #FFDDEE;
+  border: 1px solid #666;
+}
+
+body.jafView {
+  background: #FFFFFF;
+}
+body.jafView>table {
+  width: 95%;
+  margin: auto;
+  border-collapse: collapse;
+  border: 1px solid #0e74ab;
+  font-family: "Trebuchet MS", "Verdana", sans-serif;
+  background: #FFFFEE;
+}
+body.jafView b, body.jafView i {
+  font-family: Cambria, Georgia, serif;
+  font-weight: bold;
+  color: #135694;
+}
+body.jafView a:visited {
+  color: blue;
+}
+/* All ROWS */
+body.jafView > table > tbody > tr {
+  border-bottom: 1px solid #b5ddf3;
+}
+body.jafView > table > tbody > tr:nth-child(even) {
+  background: #f5faff;
+}
+body.jafView > table > tbody > tr:nth-child(odd) {
+  background: #fff;
+}
+
+/* TDs of all */
+body.jafView>table > tbody > tr > td {
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* Heading */
+body.jafView > table > tbody > tr:nth-of-type(1) td {
+  text-align: center;
+  background: #daf2ff;
+  padding: 4px;
+  font-size: 120%;
+}
+
+/* Home Link */
+body.jafView > table > tbody > tr:nth-of-type(2) td {
+  padding: 4px 10px;
+  background: #0e74ab;
+}
+body.jafView > table > tbody > tr:nth-of-type(2) td a {
+  color: white;
+}
+
+/* Home Link A*/
+body.jafView > table > tbody > tr:nth-of-type(2) td a b {
+  font-size: large;
+  color: white;
+}
+
+/* Info by Office */
+body.jafView > table > tbody > tr:nth-of-type(3) td b {
+  font-size: xx-small;
+  font-weight: lighter;
+}
+
+/* <HR>s*/
+body.jafView > table > tbody hr {
+  display: none;
+}
+/*body.jafView > table > tbody > tr:nth-of-type(4),
+body.jafView > table > tbody > tr:nth-of-type(13),
+body.jafView > table > tbody > tr:nth-of-type(16),
+body.jafView > table > tbody > tr:nth-of-type(20),
+body.jafView > table > tbody > tr:nth-of-type(22),
+body.jafView > table > tbody > tr:nth-of-type(25),
+body.jafView > table > tbody > tr:nth-of-type(31),
+body.jafView > table > tbody > tr:nth-of-type(33),
+body.jafView > table > tbody > tr:nth-of-type(34){  
+  display: none;
+} */
+/* Salary Details */
+body.jafView > table > tbody > tr:nth-of-type(14) {
+  
+}
+body.jafView > table > tbody > tr:nth-of-type(14) > b:nth-of-type(1) {
+  display: block;
+  padding-bottom: 10px;
+}
+/* TABLE in TABLE */
+body.jafView > table table {
+  margin: auto;
+  border: 1px solid #999;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+body.jafView > table table th {
+  background: #4789af;
+  padding: 10px;
+  border: 1px solid #999;
+}
+body.jafView > table table td {
+  padding: 1px 10px;
+  border: 1px solid #999;
+}
+body.jafView > table table tr:nth-child(even) td {
+  background: #DDD;
+}
+body.jafView > table table tr:nth-child(odd) td {
+  background: #FFF;
+}
+body.jafView > table table th b,
+body.jafView > table table th i {
+  color: white;
+}
+body.jafView > table table tr:hover td {
+  background: #DDEEFF;
+}
+/*
+body.jafView > table > tr td:nth-child(1) {
+  text-align: left;
+}
+body.jafView > table > tr td:nth-child(2) {
+  padding-left: 5px;
+}
+body.jafView > table > tr:nth-child(2) td {
+  padding: 2px 4px;
+  background-color: #DDD;
+} */

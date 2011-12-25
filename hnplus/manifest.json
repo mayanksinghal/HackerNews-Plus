@@ -1,0 +1,25 @@
+{
+  "name": "HackerNews Plus",
+  "version": "0.0.1",
+  "description": "Makes the placement site more useful - Mayank Singhal",
+  "update_url": "http://home.iitb.ac.in/~mayank.singhal/chrome/hnplus/updates.xml",
+  "permissions": [
+    "tabs",
+    "http://news.ycombinator.com/*"
+  ],
+  "icons": {
+    "48" : "icon.png",
+    "128" : "thumbnail.png"
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "background_page" : "background.html",
+  "content_scripts": [
+    {
+      "matches": ["http://news.ycombinator.com/*"],
+      "js" : ["js/jquery.min.js", "js/contentscript.js"],
+      "css" : ["css/main.css"]
+    }
+  ]
+}
