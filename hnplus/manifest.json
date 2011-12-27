@@ -1,6 +1,6 @@
 {
   "name": "HackerNews Plus",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Makes the placement site more useful - Mayank Singhal",
   "update_url": "http://home.iitb.ac.in/~mayank.singhal/chrome/hnplus/updates.xml",
   "permissions": [

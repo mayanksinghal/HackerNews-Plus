@@ -4,15 +4,15 @@
  * LICENSE file.
  */
 var HNPlus = function() {
-	
+
 	/**
 	 * Implements keyboard shortcuts for the current page.
 	 */
 	var keyboardShortcuts = function() {
-		
+
 		/**
 		 * Returns a story Object given corresponding DOM.
-		 * 
+		 *
 		 * @param domElement The DOM Element corresponding to the story.
 		 * @return Correspoding story Object.
 		 */
@@ -28,12 +28,12 @@ var HNPlus = function() {
 					return;
 				}
 				isSelected = true;
-				
+
 				row1.addClass("selected");
 				row1.addClass("top");
 				row2.addClass("selected");
 				row2.addClass("bottom");
-				
+
 				var offset = row1.offset().top - $(window).scrollTop();
 				if((offset > window.innerHeight) || (offset < 0)){
 					$('html, body').animate({
@@ -41,7 +41,7 @@ var HNPlus = function() {
 						}, { queue: false, duration: 600});
 				}
 			};
-			
+
 			/**
 			 * Deselects the story.
 			 */
@@ -69,10 +69,10 @@ var HNPlus = function() {
 				}
 			}
 		};
-		
+
 		var stories = [];
 		var currentlySelected = -1;
-		
+
 		/**
 		 * Deselects the previous story, selects the new one.
 		 *
@@ -86,10 +86,10 @@ var HNPlus = function() {
 			stories[newIndex].select();
 			currentlySelected = newIndex;
 		}
-		
+
 		/**
 		 * Select the story that comes prior to the current story
-		 * 
+		 *
 		 */
 		var selectPrevious = function() {
 			if (currentlySelected == 0) {
@@ -97,10 +97,10 @@ var HNPlus = function() {
 			}
 			selectElement(currentlySelected - 1);
 		}
-		
+
 		/**
 		 * Select the story that comes after to the current story
-		 * 
+		 *
 		 */
 		var selectNext = function() {
 			if (currentlySelected == stories.length - 1) {
@@ -108,35 +108,35 @@ var HNPlus = function() {
 			}
 			selectElement(currentlySelected + 1);
 		}
-		
+
 		/**
 		 * Selects the first story.
 		 */
 		var selectFirst = function() {
 			selectElement(0);
 		}
-		
+
 		/**
 		 * Selects the last story.
 		 */
 		var selectLast = function() {
 			selectElement(stories.length - 1);
 		}
-		
+
 		/**
 		 * Open Story in the current Tab.
 		 */
 		var openStoryHere = function() {
 			stories[currentlySelected].openHere();
 		}
-		
+
 		/**
 		 * Open Story in the a New Tab.
 		 */
 		var openStoryInNew = function() {
 			stories[currentlySelected].openInNew();
 		}
-		
+
 		/**
 		 * Parses DOM to get an array of story Objects.
 		 */
@@ -157,7 +157,7 @@ var HNPlus = function() {
 			}
 			stories[0].select();
 			currentlySelected = 0;
-			
+
 			// Register events.
 			$(document).bind("keydown", "k", selectPrevious);
 			$(document).bind("keydown", "j", selectNext);
@@ -168,10 +168,10 @@ var HNPlus = function() {
 			$(document).bind("keydown", "return", openStoryHere);
 			$(document).bind("keydown", "shift+return", openStoryInNew);
 		};
-		
+
 		parseStories();
 	};
-	
+
 	/**
 	 * Checks if the string starts with any of the given prefixes.
 	 *
@@ -187,22 +187,22 @@ var HNPlus = function() {
 		}
 		return false;
 	};
-	
-	
+
+
 	/**
 	 * Initiate operations: Keyboard Shortcuts etc.
 	 */
 	var initate = function() {
 		var pathname = window.location.pathname;
-		
+
 		// Keyboard shortcuts.
-		var prefixes = [ "/news", "/newest", "/x"];
+		var prefixes = [ "", "/news", "/newest", "/x"];
 		if (hasPrefix(pathname, prefixes)) {
 			// Operations for news pages.
 			keyboardShortcuts();
 		}
 	};
-	
+
 	$(document).ready(function () {
 		initate();
 	});
