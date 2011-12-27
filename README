@@ -2,4 +2,19 @@ HackerNews Plus
 A Google Chrome Addon to make the HackerNews experience a little better.
 
 Developer: Mayank Singhal
-GitHub ID: mayanksinghal
+GiitHub ID: mayanksinghal
+
+
+v0.1.1
+Fixed Bug: Works on Landing Page.
+
+v0.1.0
+Basic Keyboard shortcuts
+   k - Previous Story
+   j - Next Story
+   Home - First Story
+   End - Last Story (or More)
+   m - Open Story in Current Window
+   n - Open Story in New Window
+   Return - Open Story in Current Window
+   Shift + Return - Open Story in New Window
